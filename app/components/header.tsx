@@ -8,7 +8,6 @@ export default function HeaderComponent() {
     useEffect(()=> {
         axios.get<GlobalResultPokemon>('https://pokeapi.co/api/v2/pokemon/').then(
             (response : AxiosResponse<GlobalResultPokemon>) => {
-                console.log(response.data)
                 setPokemonData(response.data.results)
             }
         )
