@@ -14,9 +14,9 @@ export default function HeaderComponent() {
         )
     }, [])
 
-    const showPokemon = pokemonData?.map((pkm) => {
+    const showPokemon : JSX.Element[] | null = pokemonData ? pokemonData.map((pkm) => {
         return <li key={pkm.name}>{pkm.name}</li>
-    })
+    }) : null
 
     return (
             <ul>
